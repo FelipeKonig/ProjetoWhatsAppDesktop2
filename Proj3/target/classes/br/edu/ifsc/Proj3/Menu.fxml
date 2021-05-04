@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsc.Proj3.UsuarioController.MenuController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="272.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="328.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints prefHeight="69.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="137.0" prefHeight="54.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane style="-fx-background-color: white;" GridPane.columnSpan="2">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="56.0" layoutX="300.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/usuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="56.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/usuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconLigacao" fitHeight="25.0" fitWidth="30.0" layoutX="145.0" layoutY="32.0" onMouseClicked="#btChamadas" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/iconChamada.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconStatus" fitHeight="25.0" fitWidth="30.0" layoutX="106.0" layoutY="32.0" onMouseClicked="#verStatus" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/iconStatus.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="cbMenuUsuario" focusColor="#405aa8" focusTraversable="false" layoutX="185.0" layoutY="29.0" onAction="#opMenuUsuario" prefHeight="25.0" prefWidth="64.0" promptText="Menu" unFocusColor="#4059a9" />
+            <ImageView fx:id="iconLupa1" fitHeight="25.0" fitWidth="22.0" layoutX="488.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/iconPesquisa.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="cbMenuContato" focusTraversable="false" layoutX="522.0" layoutY="29.0" onAction="#opMenuContato" prefHeight="25.0" prefWidth="64.0" promptText="Menu" unFocusColor="#4059a9" />
+            <Label fx:id="lblContato" layoutX="353.0" layoutY="35.0" text="Contato">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="272.0" layoutY="-58.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane style="-fx-background-color: #f0f2f1;" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="CENTER">
+         <children>
+            <TextField fx:id="txtBuscarContato" focusTraversable="false" layoutX="38.0" layoutY="14.0" promptText="Procurar ou começar uma nova conversa" style="-fx-border-color: lawngreen;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="2.0" />
+            <ImageView fx:id="iconLupa2" fitHeight="25.0" fitWidth="22.0" layoutX="14.0" layoutY="19.0" onMouseClicked="#buscarContato" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="236.0">
+               <image>
+                  <Image url="@img/iconPesquisa.png" />
+               </image>
+            </ImageView>
+            <Separator layoutY="52.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <JFXListView fx:id="listContatos" onMouseClicked="#contatoSelecionado" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+            <ImageView fx:id="btAddContato" fitHeight="39.0" fitWidth="39.0" layoutX="203.0" layoutY="268.0" onMouseClicked="#verContatos" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="41.85416603088379">
+               <image>
+                  <Image url="@img/iconUser.png" />
+               </image>
+            </ImageView>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </AnchorPane>
+      <AnchorPane prefHeight="51.0" prefWidth="328.0" style="-fx-background-color: #f0f2f1;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4">
+         <children>
+            <Separator layoutX="11.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ImageView fx:id="iconEmotion" fitHeight="24.0" fitWidth="30.0" layoutX="14.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="21.04166603088379">
+               <image>
+                  <Image url="@img/iconEmotion.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="txtMensagem" layoutX="54.0" layoutY="288.0" prefHeight="37.0" prefWidth="193.0" promptText="Digite sua mensagem" style="-fx-border-color: lawngreen;" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="81.0" />
+            <JFXButton fx:id="btEnviar" buttonType="RAISED" layoutX="257.0" layoutY="295.0" onAction="#enviarMsg" style="-fx-background-color: #0ba809;" text="ENVIAR" textFill="#f5f5f5" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="14.0" />
+            <TextArea fx:id="msg1" editable="false" layoutX="29.0" layoutY="27.0" prefHeight="40.0" prefWidth="272.0" style="-fx-border-color: lawngreen;" visible="false" wrapText="true" />
+            <TextArea fx:id="msg2" editable="false" layoutX="28.0" layoutY="87.0" prefHeight="40.0" prefWidth="272.0" style="-fx-border-color: black;" text="Não estou disponível no momento" visible="false" />
+            <TextArea fx:id="msg3" editable="false" layoutX="28.0" layoutY="151.0" prefHeight="40.0" prefWidth="272.0" style="-fx-background-color: lawngreen;" visible="false" wrapText="true" />
+            <TextArea fx:id="msg4" editable="false" layoutX="29.0" layoutY="213.0" prefHeight="40.0" prefWidth="272.0" style="-fx-border-color: black;" text="...." visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

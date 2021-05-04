@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsc.Proj3.ContatoController.PerfilContatoController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #42f5ad;" GridPane.columnSpan="2">
+         <children>
+            <ImageView fx:id="iconVoltar" fitHeight="43.0" fitWidth="49.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#btVoltar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/iconVoltar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="83.0" layoutY="13.0" text="Perfil do contato" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <ImageView fx:id="iconUsuario" fitHeight="105.0" fitWidth="131.0" layoutX="73.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/usuario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="txtNome" layoutX="55.0" layoutY="3.0" text="Nome do contato">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0f2f1;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="21.0" layoutY="32.0" text="Recado" textFill="#0ba809">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <Text fx:id="txtRecado" layoutX="16.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recado do  contato" wrappingWidth="258.13671875" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.86328125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <Label layoutX="46.0" layoutY="34.0" text="Número:" textFill="#0ba809">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="20.0" />
+               </font>
+            </Label>
+            <Text fx:id="txtNumero" layoutX="129.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NúmeroTelefone">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <children>
+            <JFXButton fx:id="btAlterarContato" buttonType="RAISED" focusTraversable="false" layoutX="65.0" layoutY="39.0" onAction="#alterarContato" prefHeight="32.0" prefWidth="181.0" style="-fx-background-color: #0ba809;" text="Alterar contato" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btApagarContato" buttonType="RAISED" focusTraversable="false" layoutX="65.0" layoutY="120.0" onAction="#visualizarContato" prefHeight="32.0" prefWidth="181.0" style="-fx-background-color: #0ba809;" text="Informações Gerais" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
