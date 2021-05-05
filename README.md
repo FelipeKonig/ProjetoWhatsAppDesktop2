@@ -6,9 +6,9 @@ O projeto consiste em manter na parte do cliente apenas as interfaces e a lógic
 
 Algumas funcionalidades do projeto:
 
--Criação de conta;
--Adicionar contatos;
--Envio de status;
--Visualização do status de contatos;
--Ligação por chamada(apenas simulação, sem de fato, realizar a ligação ao contato);
--Edição de contatos, conta e afins.
+- Criação de conta;
+- Adicionar contatos;
+- Envio de status;
+- Visualização do status de contatos;
+- Ligação por chamada(apenas simulação, sem de fato, realizar a ligação ao contato);
+- Edição de contatos, conta e afins.
